@@ -1,0 +1,120 @@
+/* Global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 0;
+}
+
+.flex-container {
+    margin: 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.card-container {
+  height: 55vh;
+  width: 45vw;
+  perspective: 1000px;
+}
+
+.the-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+
+.card-container:hover .the-card {
+  transform: rotateY(180deg);
+  transition: all 0.5s;
+}
+
+.front,
+.back {
+  border-radius: 10px;
+    width: 100%;
+  height: 100%;
+  box-shadow: 0 0 2px;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: rgb(99, 99, 99);
+}
+
+/* Front styles */
+
+.front-content {
+  max-width: 95%;
+  margin: auto;
+  text-align: center;
+}
+
+.front-content h3 {
+  color: darkslategrey;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* End Front content */
+/* -------------------------------------------- */
+/* the back card styling */
+
+.back-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.back-content p{
+    font-size: 30px;
+}
+
+.back-content h2{
+    font-size: 40px;
+}
+
+.back-content button{
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background: none;
+
+}
+.back-content button:hover{
+    background: rgb(107, 112, 131);
+    color: white;
+    border-color: rgb(109, 26, 26);
+
+}
+.back-content li {
+  /* max-width: 100%; */
+  text-align: center;
+  font-size: 15px;
+  padding: 2px;
+  border-bottom: rgba(68, 61, 61, 0.8) 2px solid;
+}
+
+.back-content li:last-child {
+  border-bottom: none;
+}
+
+

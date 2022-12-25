@@ -1,0 +1,116 @@
+
+
+/* variables */
+:root{
+    --clr-background: #4b495a;
+    --clr-primary-1: #424141;
+    --clr-text-1: #fddddd;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--clr-background);
+}
+
+.item img{
+    width: 70vw;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center; /*align items horizontally*/
+    align-items: center; /*align items vertically*/
+}
+
+.item{
+    position: relative;
+    overflow: hidden;
+}
+
+.item::after{
+    content: '';
+    display: block;
+    background-color: var(--clr-primary-1);
+    opacity: .8;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scale(2) translate(-65%,-65%) rotate(45deg);
+    transition: transform 1.2s ease-in-out;
+}
+
+.item:hover::after{
+    transform: scale(2) translate(0,0) rotate(45deg);
+}
+
+.item-image{
+    transform: scale(1);
+    transition: 1s ease;
+}
+
+.item:hover .item-image{
+    transform: scale(1.2);
+}
+
+.item .item-text{
+    /* Position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* general styles */
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    color: var(--clr-text-1);
+    /* Animation */
+    transform: translateY(-30px);
+    transition: opacity 0.2s ease, transform 1s ease;
+    transition-delay: 0.5s;
+}
+
+.item:hover .item-text{
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.item .item-text h2{
+    font-size: 4rem;
+    letter-spacing: 3px;
+    margin: 5px;
+}
+
+.item .item-text p{
+    font-size: 1.5rem;
+    letter-spacing: 3px;;
+    margin: 10px;
+}
+
+.item .item-text button{
+    font-size: 2rem;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    background: transparent;
+    color: var(--clr-text-1);
+    border: solid 2px white;
+}

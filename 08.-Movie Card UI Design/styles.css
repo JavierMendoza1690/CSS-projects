@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#007bb2, #0d1423);
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+ .card .poster{
+    position: relative;
+    
+}
+
+.card .poster::before{
+    content: '';
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,#1864a6 50%, transparent);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card:hover .poster::before{
+    bottom: 0px;
+}
+
+.card .poster img{
+    width: 100%;
+}
+
+.card:hover .poster img{
+    transform:  translateY(-50px);
+    transition: 0.5s ease-in-out;
+    filter: blur(1px);
+}
+
+.card:not(:hover) .poster img{
+    transition: 0.5s;
+}
+
+.card .details{
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.card:hover .details{
+   bottom: 0px;
+}
+
+.card .details .logo{
+    max-width: 180px;
+}
+
+.card .details h3{
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.card .details .rating{
+    position: relative;
+    padding: 5px 0;
+}
+
+.card .details .rating .fa-star{
+    color: #f7f406;
+    font-size: 1rem;
+}
+
+.card .details .rating span{
+    color: #fff;
+    margin-left: 5px;
+}
+
+.card .details .tags{
+    position: relative;
+    margin-top: 5px;
+}
+
+.card .details .tags span{
+    padding: 2px 5px;
+    color: #fff;
+    background: #03a8f5;
+    border-radius: 4px;
+}
+
+.card .details .tags span:nth-child(2){
+    background: #ff5722;
+}
+
+.card .details .info{
+    color: #fff;
+    margin-top: 30px;
+}
+
+.card .details .cast{
+    position: relative;
+}
+
+.card .details .cast h4{
+    color: white;
+}
+
+.card .details .cast ul{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.card .details .cast ul li{
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.card .details .cast ul li img{
+    max-width: 100%;
+}

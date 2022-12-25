@@ -1,0 +1,121 @@
+:root{
+    --clr-textColor1: #fff;
+    --clr-secundary: #ffffff;
+    --clr-primary: rgb(72, 97, 143);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--clr-primary);
+}
+
+h1{
+    color: var(--clr-textColor1);
+    font-size: 40px;
+}
+
+.flex-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar{
+    background: white;
+    height: 5vh;
+    margin: 5vh;
+    border-radius: 20px;
+    /* transition: 0.8s; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar:hover input{
+    width: 400px;
+    padding-left: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.searchBar:not(:hover) input{
+    transition: 0.5s;
+}
+
+.searchBar:hover .icon{
+   background: #333;
+   color: var(--clr-textColor1);
+   
+   border-radius: 50%;
+}
+
+.searchBar input{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 0px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* Example 2 */
+
+input[type="checkbox"]{
+    display: none;
+}
+.search-bar{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    margin: 60px;
+}
+
+.search-bar input{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: black;
+    padding-left: 10px;
+    transition: 0.5s;
+    opacity: 0;
+    /* overflow: hidden; */
+}
+
+.search-bar label {  
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    background: var(--clr-secundary);
+    font-size: 1.5rem;
+}
+
+#check:checked +.search-bar{
+    width: 400px;
+}
+
+#check:checked +.search-bar input{
+    opacity: 1;
+}
