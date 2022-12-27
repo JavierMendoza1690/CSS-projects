@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: #416a99;
+    justify-content: center;
+    align-items: center;
+
+    /* min-height: 100vh; */
+}
+
+.titulo{
+    background: rgba(255, 255, 255, 0.877);
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0px; */
+    
+}
+section{
+    position: relative;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #000000;
+    border-bottom: 3px solid #98d394;
+    margin: 10px;
+    padding: auto;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.container .box{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    color: rgb(250, 250, 250);
+    border: 2px solid #b6ffb3;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: grid;
+    
+}
+
+.container .box .item{
+    border: 1px solid #4a5a6d;
+    position: relative;
+    background: #ff8f44;
+    width: 100px;
+    height: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 300px #b6ffb3;
+}
+
+.top-left{
+    justify-self: start;
+}
+
+.top-center{
+    justify-self: center;
+}
+
+.top-right{
+    justify-self: end;
+}
+
+.center-left{
+    justify-self: start;
+    align-self: center;
+}
+
+.center{
+    justify-self: center;
+    align-self: center;
+}
+
+.center-right{
+    justify-self: end;
+    align-self: center;
+}
+
+.bottom-left{
+    justify-self: start;
+    align-self: flex-end;
+}
+
+.bottom-center{
+    justify-self: center;
+    align-self: flex-end;
+}
+
+.bottom-right{
+    justify-self: end;
+    align-self: flex-end;
+}
+
+
